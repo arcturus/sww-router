@@ -1,0 +1,23 @@
+{
+  "name": "sww-router",
+  "version": "1.0.0",
+  "description": "Simple js url router used in serviceworkerware",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "serviceworkers",
+    "routing"
+  ],
+  "author": "Francisco Jordano <francisco@jordano.es>",
+  "license": "MPL",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.10.0",
+    "gulp-mocha": "^2.0.1",
+    "gulp-watch": "^4.2.4",
+    "sinon": "^1.14.1"
+  }
+}
