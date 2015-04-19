@@ -23,7 +23,7 @@ Router.prototype.add = function r_add(method, path, handler) {
   }
   this.stack.push({
     method: method,
-    path: new RegExp(path),
+    path: new RegExp('^' + path + '$'),
     handler: handler
   });
 };
@@ -73,7 +73,7 @@ Router.prototype.match = function r_match(method, url) {
       return;
     }
 
-    if (route.path.test(url)) {
+    if (url.match(route.path)) {
       matches.push(route.handler);
     }
   });
