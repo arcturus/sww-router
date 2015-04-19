@@ -37,6 +37,11 @@ Router.prototype.methods.forEach(function(method) {
   };
 });
 
+/**
+ * Proxy the router methods to the given object. Used to give the
+ * inmediate layer the same syntax than the router uses.
+ * @param obj (Object) object to proxify the Router methods
+ */
 Router.prototype.proxyMethods = function r_proxyPrototype(obj) {
   var self = this;
   this.methods.forEach(function(method) {
@@ -54,6 +59,9 @@ Router.prototype.proxyMethods = function r_proxyPrototype(obj) {
 /**
  * Matches the given url and methods with the routes stored in
  * the stack.
+ * @param method (string) http verb
+ * @param url (string) url requested
+ * @returns (Array) array of middleware that matches method and url
  */
 Router.prototype.match = function r_match(method, url) {
   method = method.toLowerCase();
